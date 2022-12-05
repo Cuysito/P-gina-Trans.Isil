@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Indie+Flower&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 150px;
+    background: url(imagen/sudamericaSATELITAL.jpeg);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: -20%;
+}
+.logo{
+    display: flex;
+    padding-top: 40px;
+    padding-left: 15px;
+}
+#cuerpo{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+.imagen_v1{
+    display: grid;
+    padding-top: 40px;
+    grid-auto-flow: column;
+    grid-auto-columns: 19%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    
+}
+
+.imagen_v2{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.imagen_v2 :hover{
+    transform: scale(1.15);
+}
+.hoteles{
+    padding-top: 40px;
+}
+h2{
+    background-color: rgba(0, 16, 165, 0.798);
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    font-family: 'Cabin', sans-serif;
+    color: blanchedalmond;
+}
+h1{
+    background-color: rgba(0, 16, 165, 0.798);
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    font-family: 'Cabin', sans-serif;
+    color: blanchedalmond;
+}
+footer{
+    padding-top: 60px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+/* espero que salga */
+
+:root {
+    --handle-size: 3rem;
+    --img-gap: .25rem;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .slider {
+    --items-per-screen: 4;
+    --slider-index: 0;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 var(--img-gap);
+    transform: translateX(calc(var(--slider-index) * -100%));
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .slider > img {
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    aspect-ratio: 16 / 9;
+    padding: var(--img-gap);
+    border-radius: 1rem;
+  }
+  
+  .handle {
+    border: none;
+    border-radius: 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: rgba(245, 248, 252, 0.25);
+    z-index: 10;
+    margin: var(--img-gap) 0;
+    width: var(--handle-size);
+    cursor: pointer;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(15, 14, 14);
+    line-height: 0;
+    transition: background-color 150ms ease-in-out;
+  }
+  
+  .left-handle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .right-handle {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .handle:hover,
+  .handle:focus {
+    background-color: rgba(255, 255, 255, .5);
+  }
+  
+  .text {
+    transition: transform 150ms ease-in-out;
+  }
+  
+  .handle:hover .text,
+  .handle:focus .text {
+    transform: scale(1.2);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem calc(var(--img-gap) * 2 + var(--handle-size));
+    align-items: center;
+  }
+  .progress-bar {
+    display: flex;
+    gap: .25rem;
+  }
+  
+  .progress-item {
+    flex: 0 0 1.5rem;
+    min-width: 1.5rem;
+    height: .5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .progress-item.active {
+    background-color: rgba(13, 27, 228, 0.9);
+  }
+  
+  @media (max-width: 1000px) {
+    .slider {
+      --items-per-screen: 3;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .slider {
+      --items-per-screen: 2;
+    }
+  }
+  
+/* Experimento */
+
+.botones{
+    text-align: center;
+    padding-top: 50px;
+}
+.but{
+    border: 1px solid rgba(0, 16, 165, 0.798);
+    color: rgba(0, 16, 165, 0.798);
+    background: none;
+    padding: 10px 25px;
+    font-size: 25px;
+    margin: 10px;
+    transition: 0.7s;
+    position: relative;
+    overflow: hidden;
+
+}
+.but:hover{
+    color: white;
+}
+.but::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(0, 16, 165, 0.798);
+    z-index: -1;
+    transition: 0.5s;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.but:hover::before{
+    height: 180%;
+}

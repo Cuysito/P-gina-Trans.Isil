@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Indie+Flower&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 150px;
+    background: url(imagen/sudamericaSATELITAL.jpeg);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: -20%;
+}
+.logo{
+    display: flex;
+    padding-top: 40px;
+    padding-left: 15px;
+}
+#cuerpo{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+.imagen_v1{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.imagen_v1 :hover{
+    transform: scale(1.15);
+}
+.imagen_v2{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.imagen_v2 :hover{
+    transform: scale(1.15);
+}
+.imagen_v3{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.imagen_v3 :hover{
+    transform: scale(1.15);
+}
+h1{
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    font-family: 'Cabin', sans-serif;
+    color: rgba(0, 16, 165, 0.798);
+}
+.parrafo{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Cabin', sans-serif;
+    color: rgba(0, 16, 165, 0.798);
+}
+footer{
+    padding-top: 60px;
+    justify-content: space-evenly;
+    display: flex;
+}
+.oferta{
+    animation: baner 10s infinite linear alternate;
+    height: 300px;
+    position: relative;
+    align-items: center;
+    background-size: 100%;
+    background-position: center;
+}
+@keyframes baner{
+    0%, 20%{
+        background-image: url(imagen/test1.jpg);
+    }
+    25%, 45%{
+        background-image: url(imagen/test2.png); 
+    }
+    50%, 70%{
+        background-image: url(imagen/test3.jpg);
+    }
+    75%, 100%{
+        background-image: url(imagen/test4.jpg);
+    }
+}
+h1{
+    text-align: center;
+    padding-top: 90px;
+}
+
+
+
+.botones{
+    text-align: center;
+    padding-top: 50px;
+}
+.but{
+    border: 1px solid rgba(0, 16, 165, 0.798);
+    color: rgba(0, 16, 165, 0.798);
+    background: none;
+    padding: 10px 25px;
+    font-size: 25px;
+    margin: 10px;
+    transition: 0.7s;
+    position: relative;
+    overflow: hidden;
+
+}
+.but:hover{
+    color: white;
+}
+.but::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(0, 16, 165, 0.798);
+    z-index: -1;
+    transition: 0.5s;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.but:hover::before{
+    height: 180%;
+}
